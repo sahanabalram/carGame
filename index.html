@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Car Game</title>
-    </head>
-    <body>
-        <h1>Car Game</h1>
-        <h3> Type 'h' for honk, 'd' for drive to work, 'w' to drive around the world or 't' to tuneup. </h3>
-        <h5>See console for car stats</h5>
-    </body>
+
+<head>
+    <title>Car Game</title>
+</head>
+
+<body>
+    <h1>Car Game</h1>
+    <h3> Type 'h' for honk, 'd' for drive to work, 'w' to drive around the world or 't' to tuneup. </h3>
+    <h5>See console for car stats</h5>
+
+    <script>
+        /* Using the code from the previous activity as a starting point, create a complete application that meets the following specifications:
+        Users can enter keyboard input (letters).
+        Each of the car's methods are assigned to a key.
+        When the user presses a key, it calls the appropriate function.
+        These letters also trigger a global function called reWriteStats() that logs the car's make, model, color, mileage, and isWorking status to the console.
+        HINT:* You WILL need to use the document.onkeyup() function to collect input from the user's keyboard. */
+
+        // car object
+        let car = {
+            make: 'Audi',
+            model: 'A3',
+            color: 'Black',
+            mileage: 56000,
+            isWorking: true,
+            driveToWork : function(){
+                alert("Old Mileage" + this.mileage);
+                this.mileage = this.mileage + 8;
+                alert("New Mileage" + this.mileage);
+            },
+            driveAroundTheWorld : function() {
+                alert("Old Mileage" + this.mileage);
+                this.mileage = this.mileage + 20000;
+                alert("New Mileage" + this.mileage);
+                alert("Car needs Tuneup!");
+
+                this.isWorking = false;
+            },
+
+            getTuneup: function() {
+                alert("Car is ready to Go wroom... wroom....");
+                this.isWorking = true;
+            },
+
+            honk: function(){
+                alert("honk honk");
+            }
+
+        }
+    </script>
+</body>
+
 </html>
