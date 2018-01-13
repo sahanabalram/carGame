@@ -65,10 +65,14 @@
         document.onekeyup = function(event) {
             var userLetterInput = String.fromCharCode(event.keycode).toLowerCase();
 
-            // letter h is pressed, run the following method
-
+            // letter h is pressed for honk, run the following method
             if(userLetterInput === 'h') {
                 car.honk();
+                reWriteStats();
+            }
+            // letter d is pressed for driving to work, run the following method
+            if(userLetterInput === 'd') {
+                car.driveToWork();
                 reWriteStats();
             }
         }
