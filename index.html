@@ -60,6 +60,18 @@
             console.log("isWorking" + car.isWorking);
             console.log("-------------------");
         }
+
+        // Actual logic
+        document.onekeyup = function(event) {
+            var userLetterInput = String.fromCharCode(event.keycode).toLowerCase();
+
+            // letter h is pressed, run the following method
+
+            if(userLetterInput === 'h') {
+                car.honk();
+                reWriteStats();
+            }
+        }
     </script>
 </body>
 
