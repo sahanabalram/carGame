@@ -12,11 +12,11 @@
 
     <script>
         /* Using the code from the previous activity as a starting point, create a complete application that meets the following specifications:
-        Users can enter keyboard input (letters).
-        Each of the car's methods are assigned to a key.
-        When the user presses a key, it calls the appropriate function.
-        These letters also trigger a global function called reWriteStats() that logs the car's make, model, color, mileage, and isWorking status to the console.
-        HINT:* You WILL need to use the document.onkeyup() function to collect input from the user's keyboard. */
+                Users can enter keyboard input (letters).
+                Each of the car's methods are assigned to a key.
+                When the user presses a key, it calls the appropriate function.
+                These letters also trigger a global function called reWriteStats() that logs the car's make, model, color, mileage, and isWorking status to the console.
+                HINT:* You WILL need to use the document.onkeyup() function to collect input from the user's keyboard. */
 
         // car object
         let car = {
@@ -25,12 +25,12 @@
             color: 'Black',
             mileage: 56000,
             isWorking: true,
-            driveToWork : function(){
+            driveToWork: function () {
                 alert("Old Mileage" + this.mileage);
                 this.mileage = this.mileage + 8;
                 alert("New Mileage" + this.mileage);
             },
-            driveAroundTheWorld : function() {
+            driveAroundTheWorld: function () {
                 alert("Old Mileage" + this.mileage);
                 this.mileage = this.mileage + 20000;
                 alert("New Mileage" + this.mileage);
@@ -39,15 +39,26 @@
                 this.isWorking = false;
             },
 
-            getTuneup: function() {
+            getTuneup: function () {
                 alert("Car is ready to Go wroom... wroom....");
                 this.isWorking = true;
             },
 
-            honk: function(){
+            honk: function () {
                 alert("honk honk");
             }
 
+        };
+
+        // log current stats of the car check the console:
+
+        function reWriteStats() {
+            console.log("Make" + car.make);
+            console.log("Model" + car.model);
+            console.log("Color" + car.color);
+            console.log("Mileage" + car.mileage);
+            console.log("isWorking" + car.isWorking);
+            console.log("-------------------");
         }
     </script>
 </body>
