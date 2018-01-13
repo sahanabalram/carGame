@@ -80,7 +80,12 @@
                 car.driveAroundTheWorld();
                 reWriteStats();
             }
-        }
+            // letter t is pressed for tuneup, run the following method
+            if(userLetterInput === 't') {
+                car.getTuneup();
+                reWriteStats();
+            }
+        };
     </script>
 </body>
 
